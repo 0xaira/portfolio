@@ -5,6 +5,33 @@ import linklist from "@/public/linklist.png";
 import quill from "@/public/quill.png";
 import x from "@/public/x.png";
 
+export const links = [
+  {
+    name: "Home",
+    hash: "#home",
+  },
+  {
+    name: "About",
+    hash: "#about",
+  },
+  {
+    name: "Projects",
+    hash: "#projects",
+  },
+  {
+    name: "Skills",
+    hash: "#skills",
+  },
+  {
+    name: "Experience",
+    hash: "#experience",
+  },
+  {
+    name: "Contact",
+    hash: "#contact",
+  },
+] as const;
+
 export const projectsData = [
     {
       title: "DigitalHippo",
