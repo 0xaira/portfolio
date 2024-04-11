@@ -4,7 +4,11 @@ import greedyPI from "@/public/greedyPI.png";
 import linklist from "@/public/linklist.png";
 import quill from "@/public/quill.png";
 import x from "@/public/x.png";
-
+import React from "react";
+import { CgWorkAlt } from "react-icons/cg";
+import { FaAngular, FaReact, FaSymfony } from "react-icons/fa";
+import { LuGraduationCap } from "react-icons/lu";
+import { SiFiverr } from "react-icons/si";
 export const links = [
   {
     name: "Home",
@@ -98,3 +102,31 @@ export const skillsData = [
     "Three.js",
     "Framer Motion",
   ] as const;
+
+  export const experiencesData = [
+    {
+      title: "Bachelor of Technology in Computer Science Engineering",
+      location: "Oxford College of Engineering and Management",
+      description:
+        "",
+      icon: React.createElement(LuGraduationCap),
+      date: "2022-2026",
+    },
+    {
+      title: "Full Stack Developer - Freelance",
+      location: "Remote",
+      description:
+        "Experienced MERN Full Stack Developer providing comprehensive web development solutions on Fiverr. Skilled in frontend and backend technologies to deliver high-quality, custom-built applications tailored to clients' needs.",
+      icon: React.createElement(SiFiverr ),
+      date: "2021-Present",
+    },
+    {
+      title: "SDE Intern",
+      location: "Remote",
+      description:
+        "Develop web solutions, api, plugins and also development under the jobs platforms",
+      icon: React.createElement(CgWorkAlt),
+      date: "2024 - 2024",
+    },
+  ] as const;
+  
