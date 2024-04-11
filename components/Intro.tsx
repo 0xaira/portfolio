@@ -8,9 +8,12 @@ import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import profile from "@/public/profile.jpeg";
 import { FaBlog, FaSquareXTwitter } from "react-icons/fa6";
+import { useSectionInView } from "@/lib/hooks";
 export default function Intro() {
+  const { ref } = useSectionInView("Home", 0.5);
   return (
     <section
+      ref={ref}
       id="home"
       className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
     >
