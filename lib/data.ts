@@ -6,7 +6,7 @@ import quill from "@/public/quill.png";
 import x from "@/public/x.png";
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaAngular, FaReact, FaSymfony } from "react-icons/fa";
+import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import { SiFiverr } from "react-icons/si";
 export const links = [
