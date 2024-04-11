@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import ActiveSectionContextProvider from "@/context/ActiveSectionContext";
 import { Toaster } from "react-hot-toast";
 import Footer from "@/components/Footer";
+import ThemeSwitch from "@/components/ThemeSwitch";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -28,6 +29,7 @@ export default function RootLayout({
             <Header />
             {children}
             <Footer />
+            <ThemeSwitch />
           </ActiveSectionContextProvider>
           <Toaster position="top-right" />
       </body>
