@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Personal Portfolio
 
-## Getting Started
+## Description
+This is my personal portfolio website built using React, Next.js, TypeScript, Tailwind CSS, Framer Motion, and hosted on Vercel. It includes features such as App Router, Server Actions, React Email & Resend functionality.
 
-First, run the development server:
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Technologies Used](#technologies-used)
+- [Features](#features)
+- [Contributing](#contributing)
+- [License](#license)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Installation
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Follow these steps to set up the project on your local machine:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your-username/your-repository.git
+   ```
+2. **Install dependencies:**
+Navigate to the project directory and run the following command to install the necessary dependencies:
+   ```bash
+   npm install
+   ```
+3. **Configure environment variables:**
+Before running the project, make sure to set up any required environment variables. This may include API keys, database connections, or other configuration settings. Refer to the .env.example file for guidance on the required variables.
+    ```
+    RESEND_API_KEY=
+    ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+4. **Start the development server:**
+Once the dependencies are installed and the environment variables are configured, start the development server by running:
+   ```bash
+   npm run dev
+   ```
+   This command will launch the project locally, typically on http://localhost:3000. You can now access the project in your browser and begin development or testing.
+If you encounter any issues during the installation process, feel free to reach out for assistance or refer to the project's documentation for troubleshooting tips.
 
-## Learn More
+## Usage
+- Customize the content in the pages.
+- Add your portfolio projects.
+- Update the styles using Tailwind CSS.
+- Deploy the website on Vercel.
 
-To learn more about Next.js, take a look at the following resources:
+## Technologies Used
+- React
+- Next.js
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Vercel
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Features
+- App Router for smooth navigation.
+- Server Actions for enhanced functionality.
+- TypeScript for type safety.
+- Tailwind CSS for easy styling.
+- Framer Motion for animations.
+- React Email & Resend for email functionality.
+- Vercel hosting for deployment.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Contributing
+1. Fork the repository.
+2. Create a new branch.
+3. Make your changes.
+4. Submit a pull request.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## License
+This project is licensed under the MIT License - see the LICENSE.md file for details.
