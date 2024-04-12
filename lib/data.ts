@@ -134,3 +134,68 @@ export const skillsData = [
     },
   ] as const;
   
+  export const frontendSkills = [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Redux",
+    "Tailwind CSS",
+    "Sass",
+    "Vue.js",
+    "Angular",
+    "Bootstrap",
+    "Material-UI",
+    "Styled Components",
+    "Webpack",
+    "Gatsby",
+    "Nuxt.js",
+] as const;
+
+export const backendSkills = [
+    "Node.js",
+    "Express",
+    "Prisma",
+    "GraphQL",
+    "PostgreSQL",
+    "MongoDB",
+    "Django",
+    "Flask",
+    "Spring Boot",
+    "ASP.NET Core",
+    "Ruby on Rails",
+    "Laravel",
+    "Firebase",
+    "AWS Lambda",
+    "Serverless Framework",
+] as const;
+
+export const devOpsSkills = [
+    "Git",
+    "Gitlab",
+    "Docker",
+    "Kubernetes",
+    "Jenkins",
+    "CircleCI",
+    "Travis CI",
+    "Ansible",
+    "Terraform",
+    "AWS",
+    "Azure",
+    "Google Cloud Platform",
+] as const;
+
+export const designSkills = [
+    "Figma",
+    "Adobe XD",
+    "Sketch",
+    "InVision",
+    "Zeplin",
+    "Abstract",
+    "Adobe Photoshop",
+    "Adobe Illustrator",
+    "Adobe After Effects",
+    "Blender",
+] as const;
