@@ -5,6 +5,7 @@ import { projectsData } from "@/lib/data";
 import SectionHeading from "@/components/SectionHeading";
 import Project from "@/components/Project";
 import HomeBtn from "@/components/HomeBtn";
+
 export default function Projects() {
   const { setActiveSection } = useActiveSectionContext();
 

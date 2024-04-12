@@ -1,4 +1,5 @@
-"use client";
+// Projects component
+'use client';
 import React from "react";
 import SectionHeading from "./SectionHeading";
 import { projectsData } from "@/lib/data";
@@ -20,7 +21,6 @@ export default function Projects() {
         ))}
         <ProjectBtn />
       </div>
-      
     </section>
   );
 }

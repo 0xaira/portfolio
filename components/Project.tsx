@@ -1,20 +1,31 @@
-// Import necessary modules
-import { projectsData } from "@/lib/data";
-import Image from "next/image";
+// Project component
+"use client";
+import { useState, useRef } from "react";
+import Image, { StaticImageData } from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
 import { RiPagesLine } from "react-icons/ri";
 import { FaCode, FaRegFileCode } from "react-icons/fa";
 
 // Define the type for project props
-type ProjectProps = (typeof projectsData)[number];
+type ProjectProps = {
+  title: string;
+  description: string;
+  tags: string[];
+  imageUrl: StaticImageData;
+  viewCodeUrl: string;
+  liveUrl: string;
+  detailsUrl: string;
+};
 
-// Project component
+
 export default function Project({
   title,
   description,
   tags,
   imageUrl,
+  viewCodeUrl,
+  liveUrl,
+  detailsUrl,
 }: ProjectProps) {
   // Ref for scroll animation
   const ref = useRef<HTMLDivElement>(null);
@@ -58,21 +69,30 @@ export default function Project({
           </ul>
           {/* Buttons */}
           <div className="flex mt-4 gap-4">
-          <button className="flex items-center gap-2 px-2 py-1 bg-gray-900 text-white rounded-full transition hover:bg-gray-800 focus:outline-none">
-              <span>Details</span>
-              <RiPagesLine />
-            </button>
-
-
-            <button className="flex items-center gap-2 px-2 py-1 bg-gray-900 text-white rounded-full transition hover:bg-gray-800 focus:outline-none">
-              <span> Code</span>
+            <button
+              className="flex items-center gap-2 px-2 py-1 bg-gray-900 text-white rounded-full transition hover:bg-gray-800 focus:outline-none"
+              onClick={() => window.open(viewCodeUrl, "_blank")}
+            >
+              <span>View Code</span>
               <FaCode />
             </button>
-            {/* Live button */}
-            <button className="flex items-center gap-2 px-2 py-1 bg-gray-900 text-white rounded-full transition hover:bg-gray-800 focus:outline-none">
+
+            <button
+              className="flex items-center gap-2 px-2 py-1 bg-gray-900 text-white rounded-full transition hover:bg-gray-800 focus:outline-none"
+              onClick={() => window.open(liveUrl, "_blank")}
+            >
               <span>Live</span>
               <FaRegFileCode />
             </button>
+
+            <button
+              className="flex items-center gap-2 px-2 py-1 bg-gray-900 text-white rounded-full transition hover:bg-gray-800 focus:outline-none"
+              onClick={() => window.open(detailsUrl, "_blank")}
+            >
+              <span> Details</span>
+              <RiPagesLine />
+            </button>
+
           </div>
         </div>
         {/* Image */}
