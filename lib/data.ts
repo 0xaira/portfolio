@@ -58,27 +58,27 @@ export const projectsData = [
       tags: ["Typescipt", "Next.js", "Socket.io", "Recoil", "Express"],
       imageUrl: digiboard,
     },
-    {
-      title: "X",
-      description:
-        "Introducing our new platform, Twitter-inspired, offering real-time microblogging and social networking features tailored for seamless communication and content sharing.",
-      tags: ["Next.js", "GraphQL", "Prisma ORM", "PostgreSQL", "Supabase", "Redis"],
-      imageUrl: x,
-    },
-    {
-      title: "Quill",
-      description:
-        " Extract information or answer questions from large PDF files like manuals, essays, books. ChatPDF analyzes the PDF and the AI will use relevant paragraphs to give you an answer.",
-      tags: ["Next.js", "Stripe", "Prisma", "LangChain", "Pinecone", "TRPC"],
-      imageUrl: quill,
-    },
-    {
-      title: "Linklist",
-      description:
-        "Discover our latest platform linklist, designed for simplified link sharing and enhanced online presence management, empowering users with customizable and intuitive link directories.",
-        tags: ["Express", "TypeScript", "Next.js", "Mongoose", "MongoDB"],
-      imageUrl: linklist,
-    },
+    // {
+    //   title: "X",
+    //   description:
+    //     "Introducing our new platform, Twitter-inspired, offering real-time microblogging and social networking features tailored for seamless communication and content sharing.",
+    //   tags: ["Next.js", "GraphQL", "Prisma ORM", "PostgreSQL", "Supabase", "Redis"],
+    //   imageUrl: x,
+    // },
+    // {
+    //   title: "Quill",
+    //   description:
+    //     " Extract information or answer questions from large PDF files like manuals, essays, books. ChatPDF analyzes the PDF and the AI will use relevant paragraphs to give you an answer.",
+    //   tags: ["Next.js", "Stripe", "Prisma", "LangChain", "Pinecone", "TRPC"],
+    //   imageUrl: quill,
+    // },
+    // {
+    //   title: "Linklist",
+    //   description:
+    //     "Discover our latest platform linklist, designed for simplified link sharing and enhanced online presence management, empowering users with customizable and intuitive link directories.",
+    //     tags: ["Express", "TypeScript", "Next.js", "Mongoose", "MongoDB"],
+    //   imageUrl: linklist,
+    // },
   ] as const;
 
 export const skillsData = [
