@@ -1,18 +1,58 @@
 "use client";
 import Link from "next/link";
 import SectionHeading from "./SectionHeading";
-import Image from "next/image";
-import profile from "../public/profile.jpeg";
+import Image, { StaticImageData } from "next/image";
 import { useSectionInView } from "@/lib/hooks";
+import codechef from "../public/codechef.png";
+import codeforces from "../public/codeforces.png"
+import hackerrank from "../public/hackerrank.png"
+import codingninjas from "../public/codingninjas.png"
+import leetcode from "../public/leetcode.png"
+import gfg from "../public/gfg.png"
+
+interface CodingProfileProps {
+  alt: string;
+  platform: string;
+  link: string;
+  image: StaticImageData;
+}
+
+function CodingProfileEntry({ alt, platform, link, image }: CodingProfileProps) {
+  return (
+    <div className="flex flex-col gap-2 items-center justify-center">
+      <div className="relative w-20 h-20 rounded-full overflow-hidden">
+        <Image
+          alt={alt}
+          src={image}
+          width={80}
+          height={80}
+          layout="responsive"
+        />
+      </div>
+      <h3 className="text-lg font-bold">{platform}</h3>
+      <Link href={link} passHref>
+        <h1 className="underline">{link}</h1>
+      </Link>
+    </div>
+  );
+}
+
+const codingProfiles: CodingProfileProps[] = [
+  { alt: "CodeForces", platform: "CodeForces", link: "https://codeforces.com/username", image: codeforces },
+  { alt: "CodeChef", platform: "CodeChef", link: "https://codechef.com/username", image: codechef },
+  { alt: "LeetCode", platform: "LeetCode", link: "https://leetcode.com/username", image: leetcode },
+  { alt: "GeeksForGeeks", platform: "GeeksForGeeks", link: "https://geeksforgeeks.com/username", image: gfg },
+  { alt: "HackerRank", platform: "HackerRank", link: "https://hackerrank.com/username", image: hackerrank},
+  { alt: "CodingNinjas", platform: "CodingNinjas", link: "https://codingninjas.com/username", image: codingninjas }
+];
+
 
 export default function CodingProfile() {
   const { ref } = useSectionInView("CodingProfiles");
+
+
   return (
-    <section
-      className="w-full py-12 md:py-24 -mt-24"
-      id="coding-profiles"
-      ref={ref}
-    >
+    <section className="w-full py-12 md:py-24 -mt-24" id="coding-profiles" ref={ref}>
       <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6 lg:gap-10">
         <div className="space-y-4">
           <SectionHeading>My Coding Profiles</SectionHeading>
@@ -21,102 +61,9 @@ export default function CodingProfile() {
           </p>
         </div>
         <div className="grid grid-cols-1 items-center justify-center gap-6 sm:grid-cols-3 md:gap-12">
-          {/* CodeForces */}
-          <div className="flex flex-col gap-2 items-center justify-center">
-            <div className="relative w-20 h-20 rounded-full overflow-hidden">
-              <Image
-                alt="CodeForces"
-                className="object-cover"
-                src={profile}
-                width={80}
-                height={80}
-              />
-            </div>
-            <h3 className="text-lg font-bold">CodeForces</h3>
-            <Link href="https://codeforces.com/username" passHref>
-              <h1 className="underline">codeforces.com/username</h1>
-            </Link>
-          </div>
-          {/* CodeChef */}
-          <div className="flex flex-col gap-2 items-center justify-center">
-            <div className="relative w-20 h-20 rounded-full overflow-hidden">
-              <Image
-                alt="CodeChef"
-                className="object-cover"
-                src={profile}
-                width={80}
-                height={80}
-              />
-            </div>
-            <h3 className="text-lg font-bold">CodeChef</h3>
-            <Link href="https://codechef.com/username" passHref>
-              <h1 className="underline">codechef.com/username</h1>
-            </Link>
-          </div>
-          {/* LeetCode */}
-          <div className="flex flex-col gap-2 items-center justify-center">
-            <div className="relative w-20 h-20 rounded-full overflow-hidden">
-              <Image
-                alt="LeetCode"
-                className="object-cover"
-                src={profile}
-                width={80}
-                height={80}
-              />
-            </div>
-            <h3 className="text-lg font-bold">LeetCode</h3>
-            <Link href="https://leetcode.com/username" passHref>
-              <h1 className="underline">leetcode.com/username</h1>
-            </Link>
-          </div>
-          {/* GeeksForGeeks */}
-          <div className="flex flex-col gap-2 items-center justify-center">
-            <div className="relative w-20 h-20 rounded-full overflow-hidden">
-              <Image
-                alt="GeeksForGeeks"
-                className="object-cover"
-                src={profile}
-                width={80}
-                height={80}
-              />
-            </div>
-            <h3 className="text-lg font-bold">GeeksForGeeks</h3>
-            <Link href="https://geeksforgeeks.com/username" passHref>
-              <h1 className="underline">geeksforgeeks.com/username</h1>
-            </Link>
-          </div>
-          {/* HackerRank */}
-          <div className="flex flex-col gap-2 items-center justify-center">
-            <div className="relative w-20 h-20 rounded-full overflow-hidden">
-              <Image
-                alt="HackerRank"
-                className="object-cover"
-                src={profile}
-                width={80}
-                height={80}
-              />
-            </div>
-            <h3 className="text-lg font-bold">HackerRank</h3>
-            <Link href="https://hackerrank.com/username" passHref>
-              <h1 className="underline">hackerrank.com/username</h1>
-            </Link>
-          </div>
-          {/* CodingNinjas */}
-          <div className="flex flex-col gap-2 items-center justify-center">
-            <div className="relative w-20 h-20 rounded-full overflow-hidden">
-              <Image
-                alt="CodingNinjas"
-                className="object-cover"
-                src={profile}
-                width={80}
-                height={80}
-              />
-            </div>
-            <h3 className="text-lg font-bold">CodingNinjas</h3>
-            <Link href="https://codingninjas.com/username" passHref>
-              <h1 className="underline">codingninjas.com/username</h1>
-            </Link>
-          </div>
+          {codingProfiles.map((profile, index) => (
+            <CodingProfileEntry key={index} image={profile.image} alt={profile.alt} platform={profile.platform} link={profile.link} />
+          ))}
         </div>
       </div>
     </section>

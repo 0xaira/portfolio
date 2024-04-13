@@ -9,6 +9,8 @@ import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import { SiFiverr } from "react-icons/si";
+import codeforces from "@/public/codeforces.avif";
+import codechef from "@/public/codechef.jpeg";
 export const links = [
   {
     name: "Home",
@@ -232,3 +234,13 @@ export const designSkills = [
     "Adobe After Effects",
     "Blender",
 ] as const;
+
+  // Data for coding profiles
+  export const codingProfiles = [
+    { imageUrl: digiboard, alt: "CodeForces", platform: "CodeForces", link: "https://codeforces.com/username" },
+    { imageUrl: quill, alt: "CodeChef", platform: "CodeChef", link: "https://codechef.com/username" },
+    { imageUrl: digiboard, alt: "LeetCode", platform: "LeetCode", link: "https://leetcode.com/username" },
+    { imageUrl: digiboard, alt: "GeeksForGeeks", platform: "GeeksForGeeks", link: "https://geeksforgeeks.com/username" },
+    { imageUrl: digiboard, alt: "HackerRank", platform: "HackerRank", link: "https://hackerrank.com/username" },
+    { imageUrl: digiboard, alt: "CodingNinjas", platform: "CodingNinjas", link: "https://codingninjas.com/username" }
+  ] as const;
